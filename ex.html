@@ -1,0 +1,94 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="proj.css">
+<style>
+body, td, th {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+th{background-color:#cccccc;}
+
+</style>
+<title>project</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#check1").click(function(){
+$("#r1").css("background-color", "red"); 
+});
+$("#check2").click(function(){
+$("#r2").css("background-color", "red"); 
+});
+$("#check3").click(function(){
+$("#r3").css("background-color", "red"); 
+});
+$("#check4").click(function(){
+$("#r4").css("background-color", "red"); 
+});
+$("#b").click(function(){ 
+		$("#b").prop('disabled',true);
+});
+$("#pre").click(function(){
+if($("#check1").is(":checked"))
+		{
+		    var u1=($("#d1").text());
+			//document.write(u1);
+		}
+else
+		{
+		    var u1=' ';
+		}
+if($("#check2").is(":checked"))
+		{
+			var u2=($("#d2").text());
+			//document.write(u2);
+		}
+else
+		{
+		    var u2=' ';
+		}
+if($("#check3").is(":checked"))
+		{
+		    var u3=($("#d3").text());
+			//document.write(u3);
+		}
+else
+		{
+		    var u3=' ';
+		}
+if($("#check4").is(":checked"))
+		{
+		    var u4=($("#d4").text());
+			//document.write(u4);
+		}
+else
+		{
+		    var u4=' ';
+		}
+		document.write(u1);
+		document.write(u2);
+		document.write(u3);
+		document.write(u4);
+});
+});
+</script>
+</head>
+<body>
+<center>
+<div>
+<table id="f" width="500px" height="200px">
+<thead><h2>POST ATTENDANCE<h2></thead>
+<tr><th>Name</th><th>Rollno</th><th>Attendance</th></tr>
+<tr id=r1><td id=d1>jaswanth</td><td>1272</td><td>mark:<input type="checkbox" id="check1"></td></tr>
+<tr id=r2><td id=d2>vikas</td><td>1271</td><td>mark:<input type="checkbox" id="check2"></td></tr>
+<tr id=r3><td id=d3>Manvitha</td><td>1270</td><td>mark:<input type="checkbox" id="check3"></td></tr>
+<tr id=r4><td id=d4>pavan</td><td>1269</td><td>mark:<input type="checkbox" id="check4"></td></tr></table></div>
+<br><br>
+<div><button name="save" id="b">save</button>
+<button name="present" id="pre">present</button>
+</div>
+</table>
+</center>
+</body>
+</html>
